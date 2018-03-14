@@ -1,4 +1,48 @@
 /*
+    FONTS
+    ---
+    @font-face declaration
+*/
+
+@font-face {
+    font-family: "Inter UI";
+    font-weight: 400;
+    src: url("../fonts/Inter-UI-Regular.woff2") format("woff2"), url("../fonts/Inter-UI-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Inter UI";
+    font-weight: 700;
+    src: url("../fonts/Inter-UI-Bold.woff2") format("woff2"), url("../fonts/Inter-UI-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Droid Serif";
+    font-weight: 400;
+    src: url("../fonts/DroidSerif-Regular-webfont.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Droid Serif";
+    font-weight: 400;
+    font-style: italic;
+    src: url("../fonts/DroidSerif-Italic-webfont.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Droid Serif";
+    font-weight: 700;
+    src: url("../fonts/DroidSerif-Bold-webfont.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Droid Serif";
+    font-weight: 700;
+    font-style: italic;
+    src: url("../fonts/DroidSerif-BoldItalic-webfont.woff") format("woff")
+}
+
+/*
     Elements: Page
     ---
     Default markup for page level elements
@@ -119,7 +163,6 @@ figcaption {
     font-size: 12px;
     line-height: 16px;
     padding-top: 8px;
-    color: Grey;
 }
 
 hr {
@@ -140,6 +183,36 @@ a:visited, a:active {
 
 a:hover, a:focus {
     color: #1abaff;
+}
+
+/*DENK AAN DE ITCSS !!!! de volgorde die we aanhouden om te css te coden=
+eerst generic, dan elements (html, body,...), dan objects (zitten hier nog niet in), dan components en dan utilities */
+
+/*
+    Components: Type
+    ---
+    Special typography classes
+*/
+
+.c-author {
+    display: flex;
+    align-items: center;
+}
+
+.c-type-meta {
+    font-size: 14px;
+    font-family: "Inter UI", "Helvetica Neue", Helvetica, arial, sans-serif;
+    line-height: 16;
+}
+
+.c-author__image {
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+}
+
+.c-author__caption {
+    padding-top: 0;
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -222,48 +295,4 @@ a:hover, a:focus {
     h2, h3 {
         page-break-after: avoid;
     }
-}
-
-/*
-    FONTS
-    ---
-    @font-face declaration
-*/
-
-@font-face {
-    font-family: "Inter UI";
-    font-weight: 400;
-    src: url("../fonts/Inter-UI-Regular.woff2") format("woff2"), url("../fonts/Inter-UI-Regular.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Inter UI";
-    font-weight: 700;
-    src: url("../fonts/Inter-UI-Bold.woff2") format("woff2"), url("../fonts/Inter-UI-Bold.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Droid Serif";
-    font-weight: 400;
-    src: url("../fonts/DroidSerif-Regular-webfont.woff") format("woff")
-}
-
-@font-face {
-    font-family: "Droid Serif";
-    font-weight: 400;
-    font-style: italic;
-    src: url("../fonts/DroidSerif-Italic-webfont.woff") format("woff")
-}
-
-@font-face {
-    font-family: "Droid Serif";
-    font-weight: 700;
-    src: url("../fonts/DroidSerif-Bold-webfont.woff") format("woff")
-}
-
-@font-face {
-    font-family: "Droid Serif";
-    font-weight: 700;
-    font-style: italic;
-    src: url("../fonts/DroidSerif-BoldItalic-webfont.woff") format("woff")
 }
