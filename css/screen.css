@@ -54,6 +54,7 @@ html {
     /*font-family: "Inter UI", "Helvetica Neue", Helvetica, arial, sans-serif;*/
     font-family: "Droid Serif", Georgia, serif;
     color: #5c6366;
+    padding: 48px 24px 24px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
@@ -197,17 +198,14 @@ eerst generic, dan elements (html, body,...), dan objects (zitten hier nog niet 
     Special typography classes
 */
 
+/*
+    Components: Author
+*/
+
 .c-author {
     display: flex;
     align-items: center;
     margin-bottom: 48px;
-}
-
-.c-type-meta {
-    font-size: 14px;
-    font-family: "Inter UI", "Helvetica Neue", Helvetica, arial, sans-serif;
-    line-height: 16;
-    margin-top: 4px;
 }
 
 .c-author__image {
@@ -215,6 +213,21 @@ eerst generic, dan elements (html, body,...), dan objects (zitten hier nog niet 
     height: 56px;
     border-radius: 100%;
     margin-right: 16px;
+}
+
+.c-author__caption {
+    padding-top: 0;
+}
+
+.c-author__name, .c-author__meta {
+    margin-bottom: 0;
+}
+
+.c-type-meta {
+    font-size: 14px;
+    font-family: "Inter UI", "Helvetica Neue", Helvetica, arial, sans-serif;
+    line-height: 16;
+    margin-top: 4px;
 }
 
 .c-author__name {
@@ -226,8 +239,13 @@ eerst generic, dan elements (html, body,...), dan objects (zitten hier nog niet 
     padding-top: 0;
 }
 
-.c-author__name, .c-author__meta {
-    margin-bottom: 0;
+@media (min-width: 992px) {
+    .c-author {
+        display: block;
+    }
+    .c-author__image {
+        margin-bottom: 16px;
+    }
 }
 
 /*
@@ -266,12 +284,6 @@ eerst generic, dan elements (html, body,...), dan objects (zitten hier nog niet 
 }
 
 @media (min-width: 992px) {
-    .c-author {
-        display: block;
-    }
-    .c-author__image {
-        margin-bottom: 16px;
-    }
     .c-article__body {
         display: flex;
         flex-wrap: wrap;
